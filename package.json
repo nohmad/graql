@@ -1,0 +1,19 @@
+{
+  "name": "grafetch",
+  "version": "1.0.0",
+  "engines": {"node": ">=12"},
+  "description": "Light-weight GraphQL client usging fetch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "graphql",
+    "fetch"
+  ],
+  "author": "Gyoung-Yoon Noh",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
