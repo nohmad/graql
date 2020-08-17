@@ -1,6 +1,6 @@
 {
-  "name": "grafetch",
-  "version": "1.0.0",
+  "name": "graql",
+  "version": "0.1.0",
   "engines": {"node": ">=12"},
   "description": "Light-weight GraphQL client usging fetch",
   "main": "index.js",
@@ -11,7 +11,11 @@
     "graphql",
     "fetch"
   ],
-  "author": "Gyoung-Yoon Noh",
+  "author": "Gyoung-Yoon Noh <nohmad@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nohmad/graql"
+  },
   "license": "MIT",
   "dependencies": {
     "node-fetch": "^2.6.0"
