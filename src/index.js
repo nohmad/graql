@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 const {Headers} = fetch;
 
 class Graql {
@@ -24,4 +24,4 @@ class Graql {
   }
 }
 
-module.exports = {Graql};
+export {Graql};
