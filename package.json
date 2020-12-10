@@ -1,23 +1,47 @@
 {
   "name": "graql",
-  "version": "0.1.1",
-  "engines": {"node": ">=12"},
-  "description": "Light-weight GraphQL client usging fetch",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "graphql",
-    "fetch"
-  ],
+  "version": "0.2.0",
   "author": "Gyoung-Yoon Noh <nohmad@gmail.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/nohmad/graql"
   },
   "license": "MIT",
+  "engines": {
+    "node": ">=12"
+  },
+  "description": "Light-weight GraphQL client usging fetch",
+  "main": "./dist/index.cjs",
+  "module": "./src/index.js",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "esm": {
+    "sourceMap": true,
+    "cjs": false
+  },
+  "scripts": {
+    "build": "node_modules/.bin/rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "graphql",
+    "fetch",
+    "client"
+  ],
   "dependencies": {
     "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "rollup": "^2.34.2"
   }
 }
