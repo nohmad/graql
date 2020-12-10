@@ -1,12 +1,13 @@
-import fetch from 'node-fetch';
-const {Headers} = fetch;
+import fetch, {Headers} from 'node-fetch';
+
+const APPLICATION_JSON = 'application/json';
 
 class Graql {
   constructor(endpoint, headers) {
     this.endpoint = endpoint;
     this.headers = new Headers({
-      'accept': 'application/json',
-      'content-type': 'application/json',
+      'accept': APPLICATION_JSON,
+      'content-type': APPLICATION_JSON,
       ...headers
     });
   }

@@ -2,7 +2,7 @@ import {builtinModules} from 'module';
 import {dependencies} from './package.json';
 
 export default {
-  input: 'src/index.js',
+  input: 'src/index.mjs',
   output: {
     file: 'dist/index.cjs',
     format: 'cjs',
