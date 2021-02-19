@@ -1,6 +1,6 @@
 {
   "name": "graql",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "author": "Gyoung-Yoon Noh <nohmad@gmail.com>",
   "repository": {
     "type": "git",
@@ -10,18 +10,13 @@
   "engines": {
     "node": ">=12"
   },
-  "description": "Light-weight GraphQL client usging fetch",
-  "main": "./dist/index.cjs",
-  "module": "./src/index.mjs",
-  "sideEffects": false,
-  "type": "module",
-  "files": [
-    "src",
-    "dist"
-  ],
+  "description": "Light-weight GraphQL client usging node-fetch",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
   "scripts": {
-    "build": "node_modules/.bin/rollup -c",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "test": "jest"
   },
   "keywords": [
     "graphql",
@@ -29,9 +24,31 @@
     "client"
   ],
   "dependencies": {
+    "@types/node-fetch": "^2.5.8",
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {
-    "rollup": "^2.34.2"
+    "@types/jest": "^26.0.20",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.1",
+    "typescript": "^4.1.5"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/*.spec.ts"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "globals": {
+      "ts-jest": {
+        "diagnostics": true
+      }
+    }
   }
 }
