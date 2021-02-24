@@ -24,7 +24,7 @@ jobs:
     - name: Install dependencies
       run: yarn --frozen-lockfile
     - run: yarn build
-    - run: yarn test
+    - run: yarn test --coverage
     - name: Coverage Report
       uses: coverallsapp/github-action@master
       with:
