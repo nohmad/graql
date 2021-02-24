@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/nohmad/graql/badge.svg?branch=master)](https://coveralls.io/github/nohmad/graql?branch=master)
+
 # Graql
 
 graql is a light-weight graphql client depends on nothing but 'node-fetch'.
