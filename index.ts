@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 
 const APPLICATION_JSON = 'application/json';
 
-interface Options {
+interface FetchOptions {
   method?: string,
   headers?: {[key: string]: string},
   body?: string,
@@ -18,9 +18,9 @@ class Graql {
   endpoint: string;
   headers: {[key: string]: string};
   debug: boolean;
-  options: Options;
+  options: FetchOptions;
 
-  constructor(endpoint: string, options: Options = {debug: false}) {
+  constructor(endpoint: string, options: FetchOptions = {debug: false}) {
     this.endpoint = endpoint;
     this.debug = options.debug;
     delete options.debug;
@@ -32,7 +32,7 @@ class Graql {
     this.options = {method: 'POST', ...options};
   }
 
-  async fetch(request: GraphqlRequest, options: Options = {}) {
+  async fetch(request: GraphqlRequest, options: FetchOptions = {}) {
     const body = JSON.stringify(request);
     const headers = {...this.headers, ...options.headers};
     const _options = {...this.options, ...options, headers};
