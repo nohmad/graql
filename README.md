@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/nohmad/graql/badge.svg?branch=master)](https://coveralls.io/github/nohmad/graql?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/nohmad/graql/badge.svg)](https://coveralls.io/github/nohmad/graql)
 
 # Graql
 
