@@ -4,3 +4,4 @@ tsconfig*
 coverage
 /*.ts
 /*.md
+/*.tgz
