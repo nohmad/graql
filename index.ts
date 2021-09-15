@@ -17,7 +17,7 @@ interface GraphqlRequest {
 class Graql {
   endpoint: string;
   headers: {[key: string]: string};
-  debug: boolean;
+  debug?: boolean;
   options: FetchOptions;
 
   constructor(endpoint: string, options: FetchOptions = {debug: false}) {

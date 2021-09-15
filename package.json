@@ -1,6 +1,6 @@
 {
   "name": "graql",
-  "version": "0.3.4",
+  "version": "0.4.3",
   "author": "Gyoung-Yoon Noh <nohmad@gmail.com>",
   "repository": {
     "type": "git",
@@ -11,11 +11,10 @@
     "node": ">=12"
   },
   "description": "Light-weight GraphQL client usging node-fetch",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/esm/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "build": "tsc -p tsconfig.json",
     "test": "jest"
   },
   "keywords": [

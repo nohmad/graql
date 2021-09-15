@@ -1,3 +1,7 @@
 .github
-*.ts
+travis.yml
 tsconfig*
+coverage
+/*.ts
+/*.md
+/*.tgz
